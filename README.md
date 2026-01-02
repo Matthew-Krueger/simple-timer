@@ -39,6 +39,7 @@ This library defines its own duration types within the `timer` namespace (e.g., 
 However, standard `std::chrono` types (e.g., `std::chrono::seconds`) usually use **integers**.
 
 **If you cast a short duration to an integer-based unit, it will truncate to zero.**
+Using the getDurationView function, you can access the underlying double precision value and cast it independently, such as if you need a float or a double or an unsigned integer.
 
 | Unit Type              | Behavior               | Example Input  | Result |
 |:-----------------------|:-----------------------|:---------------|:-------|
