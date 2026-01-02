@@ -149,6 +149,7 @@ To use the MPI wall clock (`MPI_Wtime`), define the build flag before including 
 ## HPC Specifics
 If an HPC compiler throws an error about `std::chrono::high_resolution_clock` not being defined, please link and compile against MPI. `srun` invokes an MPI context anyway, so it really doesn't matter.
 If an HPC compiler throws an error about MPI_Wtime not being defined, even if not building with MPI, turn on MPI building and link with MPI. `srun` invokes an MPI context anyway, so it really doesn't matter.
+On an HPC system, there is some argument over whether MPI_Wtime is enough. This implementation does *not* use MPI_Barrier, however arguably this should happen. This may be added in a future update.
 
 ## Additional Demos
 See `main.cpp` for additional examples.
