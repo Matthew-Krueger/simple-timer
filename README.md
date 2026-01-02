@@ -152,6 +152,11 @@ If an HPC compiler throws an error about MPI_Wtime not being defined, even if no
 ## Additional Demos
 See `main.cpp` for additional examples.
 
+## Dependency Specifics
+The library has no external dependencies outside of the standard library, C++17 or above.
+The library will make use of `MPI_Wtime` if the build flag is defined.
+The library will make use of some limited compiler intrinsics if compiling with GCC or Clang.
+
 ## License
 Copyright 2026 Matthew Krueger <contact@matthewkrueger.com>
 Original Source: https://github.com/Matthew-Krueger/simple-timer
